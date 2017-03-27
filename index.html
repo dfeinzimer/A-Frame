@@ -1,12 +1,19 @@
 <html>
   <head>
+    <title>kernelpop - VR</title>
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-box color="#6173F4" opacity="0.8" depth="2"></a-box>
-      <a-sphere radius="2" src="texture.png" position="1 1 0"></a-sphere>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-assets>
+        <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+        <img id="skyTexture"
+        src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+        <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+      </a-assets>
+      <a-sky src="#skyTexture"></a-sky>
+      <a-plane src = "grass.jpg" color = "green" position="0 0 0" rotation="-90 0 0" width="3000" height="3000" repeat="1000 1000"></a-plane>
+      <a-box color = "grey" position="0 1 -10" rotation="0 30 0" scale="2 10 2"></a-box>
     </a-scene>
   </body>
 </html>
